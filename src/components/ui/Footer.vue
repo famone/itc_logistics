@@ -1,9 +1,11 @@
 <template>
 	<footer>
 		<div class="container">
-			<div class="col-lg-12">
-				<div class="logo">
-					<img src="../../assets/img/logo.svg" alt="">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo">
+						<img src="../../assets/img/logo.svg" alt="">
+					</div>
 				</div>
 			</div>
 
@@ -12,16 +14,16 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<ul class="footer-links">
-							<router-link tag="li" to="">Услуги</router-link>
-							<router-link tag="li" to="">О компании</router-link>
-							<router-link tag="li" to="">Этапы нашей работы</router-link>
+							<router-link tag="li" to="#serv" v-scroll-to="'#serv'">Услуги</router-link>
+							<router-link tag="li" to="#about" v-scroll-to="'#about'">О компании</router-link>
+							<router-link tag="li" to="#steps" v-scroll-to="'#steps'">Этапы нашей работы</router-link>
 						</ul>
 					</div>
 					<div class="col-lg-6">
 						<ul class="footer-links">
-							<router-link tag="li" to="">Автопарк</router-link>
-							<router-link tag="li" to="">Расчет стоимости</router-link>
-							<router-link tag="li" to="">Владельцам транспорта</router-link>
+							<router-link tag="li" to="#park" v-scroll-to="'#park'">Автопарк</router-link>
+							<router-link tag="li" to="#cost" v-scroll-to="'#cost'">Расчет стоимости</router-link>
+							<router-link tag="li" to="#transport" v-scroll-to="'#transport'">Владельцам транспорта</router-link>
 						</ul>
 					</div>
 					<div class="col-lg-6">

@@ -31,15 +31,15 @@
 					},
 					{
 						img: require('../assets/img/serv2.svg'),
-						title: 'Автомобильная перевозка'
+						title: 'Перевозка опасного груза'
 					},
 					{
 						img: require('../assets/img/serv3.svg'),
-						title: 'Автомобильная перевозка'
+						title: 'Негабаритные грузоперевозки'
 					},
 					{
 						img: require('../assets/img/serv4.svg'),
-						title: 'Автомобильная перевозка'
+						title: 'Грузоперевозки по городу'
 					}
 				]
 			}

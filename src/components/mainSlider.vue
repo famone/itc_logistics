@@ -24,8 +24,9 @@
 		    					</div>
 
 
-		    					<button data-swiper-parallax="-100" class="orange-btn" @click="openCall($emit)"
-		    					:allowTouchMove="false">Узнать больше</button>
+		    					<button data-swiper-parallax="-100" class="orange-btn" @click="openCall($emit)">
+		    						Узнать больше
+		    					</button>
 		    				</div>
 		    			</div>
 		    		</swiper-slide>

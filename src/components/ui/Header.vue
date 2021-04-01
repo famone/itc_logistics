@@ -6,8 +6,8 @@
 					<img src="../../assets/img/logo.svg" alt="">
 				</router-link>
 				<ul class="hidden-sm hidden-xs">
-					<li class="white-link">Услуги</li>
-					<li class="white-link">О компании</li>
+					<router-link tag="li" to="#serv" class="white-link" v-scroll-to="'#serv'">Услуги</router-link>
+					<router-link tag="li" to="#about" class="white-link" v-scroll-to="'#about'">О компании</router-link>
 				</ul>
 				<div class="header-contacts text-right hidden-xs hidden-sm">
 					<a href="tel:+79871536006" class="white-link">+7 987 153-60-06</a>
@@ -26,13 +26,13 @@
 				</div>
 
 				<div class="mobile-menu" v-if="mobileMenu">
-					<ul class="footer-links">
-							<router-link tag="li" to="#serv">Услуги</router-link>
-							<router-link tag="li" to="#about">О компании</router-link>
-							<router-link tag="li" to="#steps">Этапы нашей работы</router-link>
-							<router-link tag="li" to="#serv">Автопарк</router-link>
-							<router-link tag="li" to="#serv">Расчёт стоимости</router-link>
-							<router-link tag="li" to="#serv">Владельцам транспорта</router-link>
+					<ul class="footer-links" @click="mobileMenu = false">
+							<router-link tag="li" to="#serv" v-scroll-to="'#serv'">Услуги</router-link>
+							<router-link tag="li" to="#about" v-scroll-to="'#about'">О компании</router-link>
+							<router-link tag="li" to="#steps" v-scroll-to="'#steps'">Этапы нашей работы</router-link>
+							<router-link tag="li" to="#park" v-scroll-to="'#park'">Автопарк</router-link>
+							<router-link tag="li" to="#cost" v-scroll-to="'#cost'">Расчёт стоимости</router-link>
+							<router-link tag="li" to="#transport" v-scroll-to="'#transport'">Владельцам транспорта</router-link>
 					</ul>
 					<h4>Контакты</h4>
 					<div class="header-contacts">

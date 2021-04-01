@@ -12,7 +12,7 @@
 							</select>
 							<img src="../assets/img/steparr.svg" class="steparr hidden-xs hidden-sm">
 							<select name="" id="">
-								<option value="as">Откуда</option>
+								<option value="as">Куда</option>
 							</select>
 						</div>
 					</div>

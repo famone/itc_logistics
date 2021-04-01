@@ -265,6 +265,7 @@ h1{
 	border-radius: 35px;
 	background-color: rgba(0,0,0,.1);
 	backdrop-filter: blur(70px);
+	-webkit-backdrop-filter: blur(70px);
 	padding: 30px 130px;
 	position: relative;
 }
@@ -371,6 +372,7 @@ h2{
 	padding: 0px 35px;
 	background: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(70px);
+	-webkit-backdrop-filter: blur(70px);
 	border-radius: 42px;
 	height: 180px;
 }
@@ -621,6 +623,9 @@ footer .logo{
 	transition: all .3s ease;
 }
 .footer-links li:hover{
+	color: #F45A09;
+}
+.footer-links li:focus{
 	color: #F45A09;
 }
 h4{
