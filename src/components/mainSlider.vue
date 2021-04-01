@@ -5,10 +5,10 @@
 		    		<swiper-slide v-for="item in slides">
 		    			<div class="slide-img" :style="{'background-image': 'url(' + item.img + ')'}">
 		    				<div class="container">
-		    					<h1 v-html="item.title" data-swiper-parallax="-300"></h1>
-		    					<h3 v-html="item.bigsub" v-if="item.bigsub" data-swiper-parallax="-200"></h3>
+		    					<h1 v-html="item.title" data-swiper-parallax="-700"></h1>
+		    					<h3 v-html="item.bigsub" v-if="item.bigsub" data-swiper-parallax="-500"></h3>
 		    					<p class="subtitle" data-swiper-parallax="-200" v-if="item.descr" v-html="item.descr"></p>
-		    					<div class="numbers" v-if="item.numbers" data-swiper-parallax="-200">
+		    					<div class="numbers" v-if="item.numbers" data-swiper-parallax="-500">
 		    						<div class="number" v-for="(num, index) in item.numbers">
 		    							<span class="big-wh">{{index + 1}}</span>
 		    							<span class="small-wh" v-html="num"></span>
@@ -58,7 +58,7 @@ import Calculate from '../components/Calculate.vue'
 				slides: [
 					{
 						title: 'Система <br> <span class="orange">лояльности</span>',
-						img: require('../assets/img/slide3.jpg'),
+						img: require('../assets/img/slide4.jpg'),
 						icons: [
 							{
 								txt: 'ДЛИТЕЛЬНОСТИ <br>СОТРУДНИЧЕСТВА',
