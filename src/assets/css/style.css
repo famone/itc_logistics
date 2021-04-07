@@ -816,7 +816,9 @@ footer form .orange-btn{
 	}
 	.step-descr-box{
 		padding: 19px 26px;
-		height: 190px;
+		height: inherit;
+		border-radius: 20px;
+		align-items: flex-start;
 	}
 	.step-descr-box .white-txt{
 		font-size: 10px;

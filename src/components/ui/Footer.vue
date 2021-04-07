@@ -64,7 +64,10 @@
 				<form @submit.prevent="submitForm()">
 					<input type="text" placeholder="Телефон" v-model="tel" v-mask="'+7 ### ###-##-##'" :class="{errorInp : $v.tel.$dirty && !$v.tel.required}">
 					<loader v-if="load" />
-					<button v-else class="orange-btn"><img src="../../assets/img/submitarr.svg" alt=""></button>
+					<button v-else class="orange-btn">
+						<span class="hidden-md hidden-lg">Заказать</span>
+						<img class="hidden-sm hidden-xs" src="../../assets/img/submitarr.svg" alt="">
+					</button>
 
 				</form>
 				<div class="header-contacts">
