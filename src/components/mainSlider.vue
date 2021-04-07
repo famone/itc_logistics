@@ -24,7 +24,7 @@
 		    					</div>
 
 
-		    					<button data-swiper-parallax="-100" class="orange-btn" @click="openCall($emit)">
+		    					<button data-swiper-parallax="-100" class="orange-btn" v-scroll-to="'#about'" v-if="item.btn">
 		    						Узнать больше
 		    					</button>
 		    				</div>
@@ -48,17 +48,21 @@ import Calculate from '../components/Calculate.vue'
 		methods: {
 			openInfo(){
 				this.$emit("openInfo")
-			},
-			openCall(){
-				this.$emit("openCall")
 			}
 		},
 		data(){
 			return{
 				slides: [
 					{
+						title: 'Все грани <br> <span class="orange">логистики</span>',
+						descr: 'Мы будем рады работать с Вами, а вы удивитесь <br> скоростью и качеством нашей работы.',
+						img: require('../assets/img/slide1.jpg'),
+						btn: true
+					},
+					{
 						title: 'Система <br> <span class="orange">лояльности</span>',
 						img: require('../assets/img/slide4.jpg'),
+						btn: false,
 						icons: [
 							{
 								txt: 'ДЛИТЕЛЬНОСТИ <br>СОТРУДНИЧЕСТВА',
@@ -75,20 +79,17 @@ import Calculate from '../components/Calculate.vue'
 						]
 					},
 					{
-						title: 'Все грани <br> <span class="orange">логистики</span>',
-						descr: 'Мы будем рады работать с Вами, а вы удивитесь <br> скоростью и качеством нашей работы.',
-						img: require('../assets/img/slide1.jpg')
-					},
-					{
 						title: 'Всё <span class="orange">просто</span>',
 						img: require('../assets/img/slide2.jpg'),
 						bigsub: '<span class="orange">ВЫ</span> ОСТАВЛЯЕТЕ ЗАЯВКУ, <span class="orange">МЫ</span> ПРЕДОСТАВИМ',
-						numbers: ['Выгодные <br> условия', 'Высокие <br> ставки', 'Оплата <br> без задержек']
+						numbers: ['Выгодные <br> условия', 'Высокие <br> ставки', 'Оплата <br> без задержек'],
+						btn: true
 					},
 					{
 						title: 'С нами <span class="orange">выгодно</span>',
 						img: require('../assets/img/slide3.jpg'),
 						bigsub: 'СВОЁ АВТО?  ЕСТЬ ЖЕЛАНИЕ ЗАРАБОТАТЬ?  НЕТ ВРЕМЕНИ ИСКАТЬ?',
+						btn: true,
 						icons: [
 							{
 								txt: 'РЕЙСЫ<br>ЕСТЬ ВСЕГДА',
@@ -110,7 +111,7 @@ import Calculate from '../components/Calculate.vue'
                   parallax: true,
                   spaceBetween: 0,
                   touchRatio: 1,
-                  loop: true,    
+                  loop: false,    
                   infinite: true,
                   speed: 800,
                   threshold: 50,

@@ -6,17 +6,17 @@
 				<div class="devider"></div>
 				<p class="subtitle">Мы будем рады работать с Вами,  а вы удивитесь <br> скоростью и качеством нашей работы.</p>
 				<button class="orange-btn" @click="openCall($emit)">Узнать больше</button>
-				<Calculate @openInfo="openInfo($emit)" />
+				<CalculateMobile @openInfo="openInfo($emit)" />
 			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-import Calculate from '../components/Calculate.vue'
+import CalculateMobile from '../components/CalculateMobile.vue'
 
 	export default{
-		components: {Calculate},
+		components: {CalculateMobile},
 		methods: {
 			openInfo(){
 				this.$emit("openInfo")

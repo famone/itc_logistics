@@ -597,9 +597,9 @@ footer{
 	padding: 25px 0; 
 	background-color: #000;
 	background-image: url(../img/monkey.svg);
-	background-size: 60%;
-	background-position: 170% center;
-	background-repeat: no-repeat;
+	background-size: auto 80%;
+    background-position: 130% center;
+    background-repeat: no-repeat;
 }
 
 footer .logo{
@@ -913,6 +913,9 @@ footer form .orange-btn{
 		margin-bottom: 30px;
 		padding: 12px 20px;
 		font-size: 12px;
+	}
+	.calculate input{
+		margin-bottom: 25px!important;
 	}
 	.choose-direction{
 		flex-wrap: wrap;

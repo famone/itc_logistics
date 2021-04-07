@@ -7,9 +7,9 @@
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="choose-direction">
-							<input type="text" id="suggest">
+							<input type="text" id="suggest3">
 							<img src="../assets/img/steparr.svg" class="steparr hidden-xs hidden-sm">
-							<input type="text" id="suggest2">
+							<input type="text" id="suggest4">
 						</div>
 					</div>
 					<div class="col-lg-3 text-right">
@@ -28,8 +28,8 @@
 				this.$emit("openInfo")
 			},
 			getCities(){
-				let cityFrom = document.querySelector('#suggest');
-				let cityTo = document.querySelector('#suggest2');
+				let cityFrom = document.querySelector('#suggest3');
+				let cityTo = document.querySelector('#suggest4');
 
 				let cities = {
 					city1: cityFrom.value,

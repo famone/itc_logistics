@@ -1,5 +1,33 @@
 <template>
 	<header>
+
+		<popup v-if="callback" @closePop="callback = false">
+			<h3 class="text-center">Обратный звонок</h3>
+			<form @submit.prevent="bookCall()" class="text-center">
+				<input type="text" placeholder="Имя" v-model="name" :class="{errorInp : $v.name.$dirty && !$v.name.required}"> <br>
+				<input type="text" placeholder="Телефон" v-model="tel" :class="{errorInp : $v.tel.$dirty && !$v.tel.required}" v-mask="'+7 ### ###-##-##'"> <br>
+				<loader v-if="load" />
+				<button class="orange-btn" v-else>Заказать</button>
+			</form>
+		</popup>
+
+		<popup v-if="errorForm" @closePop="errorForm = false">
+			<div class="text-center">
+				<h3 class="orange">Ошибка!</h3>
+				<h3>Попробуйте отправить <br>еще раз позже</h3>
+			</div>
+		</popup>
+
+
+		<popup v-if="successForm" @closePop="successForm = false">
+			<div class="text-center">
+				<h3 class="orange">Готово!</h3>
+				<h3>Мы свяжемся с вами в <br>ближайшее время</h3>
+			</div>
+		</popup>
+
+
+
 		<div class="container">
 			<div class="shapka">
 				<router-link tag="div" to="/">
@@ -11,9 +39,9 @@
 				</ul>
 				<div class="header-contacts text-right hidden-xs hidden-sm">
 					<a href="tel:+79871536006" class="white-link">+7 987 153-60-06</a>
-					<a href="mailto:logisticsitc@mail.ru" class="white-link">logisticsitc@mail.ru</a>
+					<a href="mailto:info@itc-log.com" class="white-link">info@itc-log.com</a>
 				</div>
-				<button class="call-btn hidden-xs hidden-sm">
+				<button class="call-btn hidden-xs hidden-sm" @click="callback = true">
 					<img src="../../assets/img/call.svg" alt="">
 					Заказать звонок
 				</button>
@@ -37,7 +65,7 @@
 					<h4>Контакты</h4>
 					<div class="header-contacts">
 						<a href="tel:+79871536006" class="white-link">+7 987 153-60-06</a>
-						<a href="mailto:logisticsitc@mail.ru" class="white-link">info@itc-log.com</a>
+						<a href="mailto:info@itc-log.com" class="white-link">info@itc-log.com</a>
 					</div>
 					<p class="white-txt-footer">445024, г. Тольятти, <br>
 						ул. Дзержинского, д. 98, <br> офис 119</p>
@@ -56,10 +84,22 @@
 
 
 <script>
+import popup from '../ui/popup.vue'
+import loader from '../ui/loader.vue'
+import axios from 'axios'
+import { required, email, minLength } from "vuelidate/lib/validators";
+
 	export default{
+		components: {popup, loader},
 		data(){
 			return{
+				load: false,
+				callback: false,
 				mobileMenu: false,
+				successForm: false,
+				errorForm: false,
+				name: '',
+				tel: '',
 				navs: [
 					{
 						link: '/services',
@@ -84,6 +124,56 @@
 
 				]
 			}
+		},
+		validations: {
+			tel:{
+				required
+			},
+			name:{
+				required
+			}
+		},
+		methods: {
+			bookCall(){
+				if(this.$v.$invalid) {
+					this.$v.$touch();
+					return;
+				}
+
+				this.load = true
+
+				let emailBody = {
+					name_client: this.name ,
+					tel: this.tel ,
+				}
+
+
+				var form = new FormData();
+
+				for (var field in emailBody){
+					form.append(field, emailBody[field]);
+				};
+
+
+				axios
+				.post('https://itc.webink.site//wp-json/contact-form-7/v1/contact-forms/9/feedback', form)
+				.then(res => {
+					this.load = false
+					this.successForm = true
+					this.callback = false
+				})
+				.catch(err =>{
+					this.load = false
+					this.errorForm = true
+					this.callback = false
+				})
+			}
 		}
 	}
 </script>	
+
+<style>
+.errorInp{
+	border: 1px red solid !important;
+}
+</style>

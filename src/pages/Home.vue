@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<mainSlider @openInfo="info1 = true" @openCall="callback = true" />
+		<mainSlider @openInfo="info1 = true"/>
 		<mobileMain @openInfo="info1 = true" @openCall="callback = true"/>
 		<Services />
 		<Steps/>
 		<Park />
 		<About />
 		<Cost @openInfo="info2 = true" />
-		<Transport @openInfo="info3 = true" @registrate="registrated = true" />
+		<Transport @openInfo="info3 = true"  />
 
 		<!-- modals -->
 
