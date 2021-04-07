@@ -7,9 +7,9 @@
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="choose-direction">
-							<input type="text" id="suggest">
+							<input type="text" id="suggest" placeholder="Откуда">
 							<img src="../assets/img/steparr.svg" class="steparr hidden-xs hidden-sm">
-							<input type="text" id="suggest2">
+							<input type="text" id="suggest2" placeholder="Куда">
 						</div>
 					</div>
 					<div class="col-lg-3 text-right">

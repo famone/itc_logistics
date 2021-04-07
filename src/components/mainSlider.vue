@@ -50,15 +50,12 @@ import Calculate from '../components/Calculate.vue'
 				this.$emit("openInfo")
 			}
 		},
+		mounted(){
+			this.$refs.mySwiper.$swiper.slideTo(1, false,false);
+		},
 		data(){
 			return{
 				slides: [
-					{
-						title: 'Все грани <br> <span class="orange">логистики</span>',
-						descr: 'Мы будем рады работать с Вами, а вы удивитесь <br> скоростью и качеством нашей работы.',
-						img: require('../assets/img/slide1.jpg'),
-						btn: true
-					},
 					{
 						title: 'Система <br> <span class="orange">лояльности</span>',
 						img: require('../assets/img/slide4.jpg'),
@@ -77,6 +74,12 @@ import Calculate from '../components/Calculate.vue'
 								img: require('../assets/img/marker.svg')
 							}
 						]
+					},
+					{
+						title: 'Все грани <br> <span class="orange">логистики</span>',
+						descr: 'Мы будем рады работать с Вами, а вы удивитесь <br> скоростью и качеством нашей работы.',
+						img: require('../assets/img/slide1.jpg'),
+						btn: true
 					},
 					{
 						title: 'Всё <span class="orange">просто</span>',
