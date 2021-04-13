@@ -85,7 +85,7 @@ import Calculate from '../components/Calculate.vue'
 						title: 'Всё <span class="orange">просто</span>',
 						img: require('../assets/img/slide2.jpg'),
 						bigsub: '<span class="orange">ВЫ</span> ОСТАВЛЯЕТЕ ЗАЯВКУ, <span class="orange">МЫ</span> ПРЕДОСТАВИМ',
-						numbers: ['Выгодные <br> условия', 'Высокие <br> ставки', 'Оплата <br> без задержек'],
+						numbers: ['Выгодные <br> условия', 'Лучший<br>транспорт', 'Прозрачный <br>договор'],
 						btn: true
 					},
 					{
