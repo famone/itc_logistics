@@ -152,7 +152,7 @@ import { required, email, minLength } from "vuelidate/lib/validators";
 
 
 				axios
-				.post('https://itc.webink.site//wp-json/contact-form-7/v1/contact-forms/10/feedback', form)
+				.post('https://itc-log.com/wp-json/contact-form-7/v1/contact-forms/10/feedback', form)
 				.then(res => {
 					this.load = false
 					this.successForm = true

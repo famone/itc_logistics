@@ -105,17 +105,6 @@ import axios from 'axios'
     document.head.append(script);
 
     //инициализируем и подключаем карты
-
-
-      axios
-      .get('https://github.com/turalus/encycloDB/blob/master/Cities/Cities%20%5BMySQL%5D.sql')
-      .then(res =>{
-        console.log(res)
-      })
-
-
-      return
-  		this.$store.dispatch("serv/loadCity")
   	},
     mounted(){
       setTimeout(()=>{
