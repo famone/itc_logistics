@@ -21,10 +21,10 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: 31.31.196.197
+        server: 37.140.192.115
         port: 21
         protocol: ftp
-        username: u0470484
+        username: u1347960
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /itc.webink.site/dist/
+        server-dir: /public_html/itc-log.com/dist/

@@ -24,7 +24,7 @@
 		    					</div>
 
 
-		    					<button data-swiper-parallax="-100" class="orange-btn" v-scroll-to="'#about'" v-if="item.btn">
+		    					<button data-swiper-parallax="-100" class="orange-btn" v-scroll-to="item.link" v-if="item.btn">
 		    						Узнать больше
 		    					</button>
 		    				</div>
@@ -60,6 +60,7 @@ import Calculate from '../components/Calculate.vue'
 						title: 'Система <br> <span class="orange">лояльности</span>',
 						img: require('../assets/img/slide4.jpg'),
 						btn: false,
+						link: '#about',
 						icons: [
 							{
 								txt: 'ДЛИТЕЛЬНОСТИ <br>СОТРУДНИЧЕСТВА',
@@ -79,20 +80,23 @@ import Calculate from '../components/Calculate.vue'
 						title: 'Все грани <br> <span class="orange">логистики</span>',
 						descr: 'Мы будем рады работать с Вами, а вы удивитесь <br> скоростью и качеством нашей работы.',
 						img: require('../assets/img/slide1.jpg'),
-						btn: true
+						btn: true,
+						link: '#about',
 					},
 					{
 						title: 'Всё <span class="orange">просто</span>',
 						img: require('../assets/img/slide2.jpg'),
 						bigsub: '<span class="orange">ВЫ</span> ОСТАВЛЯЕТЕ ЗАЯВКУ, <span class="orange">МЫ</span> ПРЕДОСТАВИМ',
 						numbers: ['Выгодные <br> условия', 'Лучший<br>транспорт', 'Прозрачный <br>договор'],
-						btn: true
+						btn: true,
+						link: '#steps',
 					},
 					{
 						title: 'С нами <span class="orange">выгодно</span>',
 						img: require('../assets/img/slide3.jpg'),
-						bigsub: 'СВОЁ АВТО?  ЕСТЬ ЖЕЛАНИЕ ЗАРАБОТАТЬ?  НЕТ ВРЕМЕНИ ИСКАТЬ?',
+						bigsub: 'СВОЁ АВТО?  ЕСТЬ ЖЕЛАНИЕ ЗАРАБОТАТЬ?  НЕТ ВРЕМЕНИ ИСКАТЬ? <br> <span class="orange">У НАС:</span>',
 						btn: true,
+						link: '#transport',
 						icons: [
 							{
 								txt: 'РЕЙСЫ<br>ЕСТЬ ВСЕГДА',
