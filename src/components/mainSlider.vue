@@ -99,11 +99,11 @@ import Calculate from '../components/Calculate.vue'
 								img: require('../assets/img/checker.svg')
 							},
 							{
-								txt: 'РЕЙСЫ<br>ЕСТЬ ВСЕГДА',
+								txt: 'ВЫСОКИЕ<br>СТАВКИ',
 								img: require('../assets/img/arrtop.svg')
 							},
 							{
-								txt: 'РЕЙСЫ<br>ЕСТЬ ВСЕГДА',
+								txt: 'ОПЛАТА<br>БЕЗ ЗАДЕРЖЕК',
 								img: require('../assets/img/dollar.svg')
 							}
 						]
