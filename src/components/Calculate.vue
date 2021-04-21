@@ -7,9 +7,9 @@
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="choose-direction">
-							<input type="text" id="suggest" placeholder="Откуда">
+							<input type="text" placeholder="Откуда" v-model="cityFrom">
 							<img src="../assets/img/steparr.svg" class="steparr hidden-xs hidden-sm">
-							<input type="text" id="suggest2" placeholder="Куда">
+							<input type="text" placeholder="Куда" v-model="cityTo">
 						</div>
 					</div>
 					<div class="col-lg-3 text-right">
@@ -23,17 +23,21 @@
 
 <script>
 	export default{
+		data(){
+			return{
+				cityFrom: '',
+				cityTo: ''
+			}	
+		},
 		methods: {
 			openInfo(){
 				this.$emit("openInfo")
 			},
 			getCities(){
-				let cityFrom = document.querySelector('#suggest');
-				let cityTo = document.querySelector('#suggest2');
 
 				let cities = {
-					city1: cityFrom.value,
-					city2: cityTo.value
+					city1: this.cityFrom,
+					city2: this.cityTo
 				}
 
 				console.log(cities)

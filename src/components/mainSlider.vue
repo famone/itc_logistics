@@ -118,7 +118,7 @@ import Calculate from '../components/Calculate.vue'
                   parallax: true,
                   spaceBetween: 0,
                   touchRatio: 1,
-                  loop: false,    
+                  loop: true,    
                   infinite: true,
                   speed: 800,
                   threshold: 50,

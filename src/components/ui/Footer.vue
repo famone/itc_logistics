@@ -75,8 +75,12 @@
 					<a href="mailto:info@itc-log.com" class="white-link">info@itc-log.com</a>
 				</div>
 				<div class="socials">
-					<a href=""><img src="../../assets/img/insta.svg" alt=""></a>
-					<a href=""><img src="../../assets/img/vk.svg" alt=""></a>
+					<a href="https://www.instagram.com/itc_official_itc/" target="_blank">
+						<img src="../../assets/img/insta.svg" alt="">
+					</a>
+					<a href="https://vk.com/itclogistics" target="_blank">
+						<img src="../../assets/img/vk.svg" alt="">
+					</a>
 				</div>
 			</div>
 			</div>
