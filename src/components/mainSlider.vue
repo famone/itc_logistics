@@ -51,7 +51,7 @@ import Calculate from '../components/Calculate.vue'
 			}
 		},
 		mounted(){
-			this.$refs.mySwiper.$swiper.slideTo(1, false,false);
+			this.$refs.mySwiper.$swiper.slideTo(2, false,false);
 		},
 		data(){
 			return{

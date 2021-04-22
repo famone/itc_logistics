@@ -147,8 +147,8 @@ import axios from 'axios'
 					name_client: this.name ,
 					tel: this.tel ,
 					email: this.email ,
-					from: this.from ,
-					to: this.to ,
+					from: this.cityFrom ,
+					to: this.cityTo ,
 					weight: this.weight ,
 					volume: this.volume ,
 					cost: this.cost ,
@@ -164,6 +164,8 @@ import axios from 'axios'
 				for (var field in emailBody){
 					form.append(field, emailBody[field]);
 				};
+
+				console.log(emailBody)
 
 
 				axios
