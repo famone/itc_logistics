@@ -165,7 +165,6 @@ import axios from 'axios'
 					form.append(field, emailBody[field]);
 				};
 
-				console.log(emailBody)
 
 
 				axios
@@ -173,6 +172,17 @@ import axios from 'axios'
 				.then(res => {
 					this.load = false
 					this.successForm = true
+					
+					this.name = '' 
+					this.tel = '' 
+					this.email = '' 
+					this.weight = '' 
+					this.volume = '' 
+					this.cost = '' 
+					this.type = '' 
+
+					this.$store.dispatch('serv/getDirection', {})
+
 				})
 				.catch(err =>{
 					this.load = false
